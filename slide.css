@@ -1,0 +1,114 @@
+/* This is for the slide show */
+.slide-image {
+    width: 768px;
+    height: 452px;
+    object-fit: contain;
+    /*To keeps ratio*/
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 768px;
+    position: relative;
+}
+
+/* Hide the images by default */
+.slide-container {
+    display: none;
+}
+
+/* Next & previous buttons */
+.slide-prev, .slide-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.slide-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slide-prev:hover, .slide-next:hover {
+    text-shadow: #cacaca 5px 5px 0px;
+}
+
+/* Caption text */
+.slide-caption {
+    color: #000000;
+    background-color: rgb(173, 216, 230, 0.6);
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 40px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.number-text {
+    background-color: rgb(173, 216, 230, 0.6);
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots */
+.dot-container{
+    width: 768px;
+    text-align: center;
+}
+
+.slide-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+/* change color if on respective slide or hover */
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* make the picture come in from fader to thoroughly */
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .slide-image , .slideshow-container, .dot-container{
+        min-width: 90%;
+        max-width: 768px;
+        min-height: auto;
+        max-height: 452px;
+    }
+}

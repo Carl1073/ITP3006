@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Mental Health Concerning Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- For slide show -->
+    <link rel="stylesheet" href="slide.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img id="club_logo" src="images/pictures/club_logo.jpg" />
+            <div class="nav">
+                <ul>
+                    <li class="" id="home_nav">
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <ul class="sub">
+                            <li><a href="schizophrenia.html">Schizophrenia</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
+                            <li><a href="bipolar.html">Bipolar disorder</a></li>
+                            <li><a href="depression.html">Depression</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+    
+        <h1>Welcome to Mental Health Concerning Club.</h1>
+        <h2>A club to care mental disorder.</h2>
+        <!-- Slideshow container -->
+        <p>Our recent activity</p>
+        <div class="slideshow-container">
+    
+            <!-- Full-width images with number and caption text -->
+            <div class="slide-container fade">
+                <div class="number-text">1 / 4</div>
+                <img class="slide-image" src="images/pictures/single talk 1.jpg">
+                <div class="slide-caption">A teacher who suffer mental health seek for help</div>
+            </div>
+    
+            <div class="slide-container fade">
+                <div class="number-text">2 / 4</div>
+                <img class="slide-image" src="images/pictures/single talk 2.jpg">
+                <div class="slide-caption">A discussion about mental health.</div>
+            </div>
+    
+            <div class="slide-container fade">
+                <div class="number-text">3 / 4</div>
+                <img class="slide-image" src="images/pictures/group talk.jpg">
+                <div class="slide-caption">Our club meeting for every half year.</div>
+            </div>
+    
+            <div class="slide-container fade">
+                <div class="number-text">4 / 4</div>
+                <img class="slide-image" src="images/pictures/speech.jpg">
+                <div class="slide-caption">Professional share to students</div>
+            </div>
+    
+            <!-- Next and previous buttons -->
+            <a class="slide-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slide-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <!-- The dots/circles -->
+        <div class="dot-container">
+            <span class="slide-dot" onclick="currentSlide(1)"></span>
+            <span class="slide-dot" onclick="currentSlide(2)"></span>
+            <span class="slide-dot" onclick="currentSlide(3)"></span>
+            <span class="slide-dot" onclick="currentSlide(4)"></span>
+        </div>    
+    </div>
+
+    <!-- This is a button to scroll to top -->
+    <button onclick="goToTop()" id="topBtn">Go to top</button>
+
+    <script src="design.js"></script>
+</body>

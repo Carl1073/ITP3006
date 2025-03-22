@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    /*To calculate the element’s width and height including padding and border. */
+}
+
+:root {
+    /*A place to store the variables */
+    --nav-padding-vert: 12px;
+    --nav-font-size: 20px;
+    --nav-sub-position: calc(var(--nav-padding-vert)*2 + var(--nav-font-size));
+    --nav-toggle: block;
+    --nav-color: #4b85b1;
+    --nav-sub-color:#85b3d5;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(138deg, rgb(249, 250, 255) 0%, rgb(190, 222, 249) 100%);
+    background-attachment: fixed; /* Keep the background fixed */
+    background-size: cover; /* Cover the entire viewport */
+    font-family:Century Schoolbook;
+    font-size: 20px;
+}
+
+/* the button that go back to top, hidden by default */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    /* to ensure it is not overlapped */
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0.5;
+    font-size: 18px;
+    transition: all ease 0.8s;
+}
+
+#topBtn:hover {
+    background-color: #adadad;
+    opacity: 1;
+}
+
+.header {
+    background: linear-gradient(138deg, #913346 0%, #527fa3 600px, #7fe4e9 100%);
+    position: sticky;
+    top: 0; /*needed for sticky position*/
+    z-index: 98; /*make it cover the content*/
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border: 1 px solid black;
+    background-color: var(--nav-color);
+    min-width: 90px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px grey;
+}
+
+#club_logo {
+    float: left;
+    height: var(--nav-sub-position);
+}
+
+#icon_menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 38px;
+    display: none;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: var(--nav-padding-vert) 12px;
+    font-size: var(--nav-font-size);
+    color: rgb(78, 78, 78);
+    display: block;
+}
+
+.nav a:hover {
+    background: linear-gradient(138deg, rgb(75, 132, 218) 0%, rgb(48, 96, 185) 100%);
+    color: rgb(214, 214, 214);
+    border-radius: 10px;
+    transition: all 0.8s ease;
+}
+
+#icon_menu:hover {
+    background-color: rgb(80, 133, 150);
+}
+
+.nav .sub {
+    position: absolute;
+    width: 200px;
+    top: var(--nav-sub-position);
+    background-color: var(--nav-sub-color);
+    box-shadow: 10px 10px 5px #a7a0a0;
+}
+
+.nav .sub a {
+    font-size: 90%;
+}
+
+.nav .sub a:hover {
+    background-color: rgb(154, 207, 225);
+}
+
+.nav .sub .sub_sub a {
+    font-size: 90%;
+    list-style: circle;
+}
+
+.nav .sub li {
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: height 500ms;
+    -moz-transition: height 500ms;
+    -o-transition: height 500ms;
+    transition: height 500ms;
+}
+
+.nav ul li:hover .sub li {
+    height: var(--nav-sub-position);
+    z-index: 98;
+    overflow: visible;
+}
+
+.nav ul li:hover .sub .sub_sub a {
+    height: var(--nav-sub-position);
+    overflow: visible;
+}
+
+.nav ul li:hover .sub .sub_sub a:hover {
+    height: var(--nav-sub-position);
+    overflow: visible;
+}
+
+
+.grow {
+    position: absolute;
+    font-size: inherit;
+    transition: font-size 1s;
+    /* Transition effect */
+}
+
+.grow:hover {
+    font-size: 200%;
+}
+
+.phone-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* responsive to screen less than 1000px */
+
+@media screen and (max-width: 1000px) {
+
+    /* not shown on the screen as scrolling down */
+    .header {
+        position: static;
+    }
+
+    /* To make the nav bar become fully on screen */
+    .nav ul,
+    .nav .sub {
+        width: 100%;
+    }
+
+    .nav .sub {
+        position: initial;
+    }
+
+    .nav ul:not(:first-child) {
+        /*This control the display of all tab except home page*/
+        display: var(--nav-toggle);
+    }
+
+    #club_logo {
+        display: none;
+    }
+
+    #icon_menu {
+        display: block;
+    }
+
+
+}
