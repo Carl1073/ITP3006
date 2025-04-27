@@ -1,0 +1,125 @@
+/* Theme Variables */
+:root {
+    /* Light Theme (default) */
+    --text-color: #333333;
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+    --button-bg: #4caf50;
+    --button-bg-reset: #f44336;
+    --button-hover: #45a049;
+    --button-hover-reset: #d32f2f;
+    --fieldset-border: #4caf50;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Theme Classes */
+:root[data-theme="dark"] {
+    --text-color: #ffffff;
+    --input-bg: #3d3d3d;
+    --input-border: #555555;
+    --button-bg: #2d5a30;
+    --button-bg-reset: #d32f2f;
+    --button-hover: #377b3b;
+    --button-hover-reset: #f44336;
+    --fieldset-border: #2d5a30;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Form Layout */
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.body h1{
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+form:hover, form:focus-within {
+    transform: translateY(-5px);
+}
+
+/* Fieldset Styling */
+fieldset {
+    padding: 20px;
+    border: 2px solid var(--fieldset-border);
+    border-color: var(--fieldset-border);
+    border-radius: 10px;
+    background: var(--form-bg);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+fieldset:hover, fieldset:focus-within {
+    border-width: 4px;
+}
+
+legend {
+    padding: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Form Elements */
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+form input[type="radio"] {
+    margin: 0 5px 0 15px;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    background: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="reset"]{
+    background: var(--button-bg-reset);
+}
+
+form input[type="submit"]:hover {
+    background: var(--button-hover);
+}
+
+form input[type="reset"]:hover{
+    background: var(--button-hover-reset);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column;
+    }
+    
+    form {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

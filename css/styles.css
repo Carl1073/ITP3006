@@ -1,0 +1,527 @@
+* {
+    box-sizing: border-box;
+    /*To calculate the element’s width and height including padding and border. */
+}
+
+:root {
+    /*A place to store the variables */
+    --theme: light;
+    --nav-padding-vert: 12px;
+    --nav-font-size: 20px;
+    --nav-sub-position: calc(var(--nav-padding-vert)*2 + var(--nav-font-size) + 7px);
+    --nav-toggle: block;
+    /* Light Theme (default) */
+    --body-color: #000000;
+    --body-a-color: #c70000;
+    --body-a-hover-color: #ff0000;
+    --body-bg-color1: #f9faff;
+    --body-bg-color2: #bedef9;
+    --bgCircle-color1: #b1dcff;
+    --bgCircle-color2: #68b9fc;
+    --bgCircle-color3: #289eff;
+    --bgCircle-after-color: #ffffff;
+    --bgShape1-color1: #ffffff;
+    --bgShape1-color2: #abdaff;
+    --bgShape2-color1: #b5deff;
+    --bgShape2-color2: #8bc6f7;
+    --header-color2: #527fa3;
+    --header-color3: #7fe4e9;
+    --sub-a-bg-color: #9acfe1;
+    --manic-color: #ff0000;
+    --depressive-color: #0000ff;
+}
+
+/* Dark Theme color */
+/* When root element has the attribute data-theme set to dark, the following styles will be applied */
+:root[data-theme="dark"] {
+    --body-color: #ffffff;
+    --body-a-color: #ffa6a6;
+    --body-a-hover-color: #ffcdcd;
+    --body-bg-color1: #246ca8;
+    --body-bg-color2: #112268;
+    --bgCircle-color1: #005da8;
+    --bgCircle-color2: #00437a;
+    --bgCircle-color3: #003560;
+    --bgCircle-after-color: #0072ff;
+    --bgShape1-color1: #4655ff;
+    --bgShape1-color2: #092d49;
+    --bgShape2-color1: #001a2f;
+    --bgShape2-color2: #024983;
+    --header-color2: #35536b;
+    --header-color3: #00565b;
+    --sub-a-bg-color: #003d51;
+    --manic-color: #ff8484;
+    --depressive-color: #bfbfff;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Century Schoolbook', 'Eras Medium ITC';
+    font-size: 20px;
+    color: var(--body-color);
+}
+
+body a{
+    color: var(--body-a-color);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+body a:hover{
+    color: var(--body-a-hover-color);
+    text-decoration: underline;
+}
+
+
+/* The container to add the Background Shape ,which need to fixed */
+.screenBackground {
+    position: fixed;
+    background: linear-gradient(180deg, var(--body-bg-color1) 0%, var(--body-bg-color2) 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* The background irregular shape that move 1 time only*/
+.bgShape {
+    position: absolute;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    transition: all 2s ease;
+}
+
+.bgShape:nth-child(1) {
+    transform: rotate(45deg);
+    height: 1200px;
+    width: 1200px;
+    background: linear-gradient(87deg, var(--bgShape1-color1), var(--bgShape1-color2));
+    top: -15%;
+    left: -22%;
+    border-radius: 0 30% 0 0;
+    animation: bgShape1Move 2s;
+}
+
+.bgShape:nth-child(2) {
+    transform: rotate(11deg);
+    height: 2000px;
+    width: 400px;
+    background: linear-gradient(46deg, var(--bgShape2-color1), var(--bgShape2-color2));
+    top: -155px;
+    right: -250px;
+    animation: bgShape2Move 2s;
+}
+
+@keyframes bgShape1Move {
+    from {
+        left: -40%;
+    }
+
+    to {
+        left: -22%;
+    }
+}
+
+@keyframes bgShape2Move {
+    from {
+        right: -350px;
+    }
+
+    to {
+        right: -250px;
+        ;
+    }
+}
+
+/* The moving background circle that keep moving*/
+.bgCircle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    bottom: -100px;
+    background: radial-gradient(circle at 30% 30%, var(--bgCircle-color1) 0%, var(--bgCircle-color2) 80%, var(--bgCircle-color3) 100%);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    animation: CircleMoveUp 10s infinite;
+    animation-timing-function: linear;
+}
+
+/* highlight of the circle */
+.bgCircle::after{
+    /* no content is needed, a placeholder for the highlight*/
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25%;
+    height: 25%;
+    /* to make it look like a highlight */
+    filter: blur(6px);
+    background-color: var(--bgCircle-after-color);
+    border-radius: 50%;
+}
+
+.body {
+    margin: 0px 15%;
+
+}
+
+@keyframes CircleMoveUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-1200px);
+    }
+}
+
+
+/* the button that go back to top, hidden by default */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    /* to ensure it is not overlapped */
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0.5;
+    font-size: 18px;
+    transition: all ease 0.8s;
+}
+
+#topBtn:hover {
+    background-color: #adadad;
+    opacity: 1;
+}
+
+#topBtn::after {
+    content: "Go to Top";
+}
+
+.header {
+    background: linear-gradient(138deg, #913346 0%, var(--header-color2) 600px, var(--header-color3) 100%);
+    position: sticky;
+    margin: 0;
+    /*needed for sticky position*/
+    top: 0;
+    /*make it cover the content*/
+    z-index: 98;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border: 1 px solid black;
+    background: #4b85b1;
+    min-width: 90px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px grey;
+}
+
+.nav ul:hover, .nav ul.active, .nav li.active {
+    background: linear-gradient(138deg, rgb(75, 132, 218) 0%, rgb(48, 96, 185) 100%);
+    color: rgb(214, 214, 214);
+    border-radius: 10px;
+    transition: all 0.8s ease;
+}
+
+#club_logo {
+    float: left;
+    margin-right: 5px;
+    height: var(--nav-sub-position);
+}
+
+#icon_menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    display: none;
+}
+
+#themeIcon {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 50px;
+    border-radius: 30%;
+    transition: all 0.8s ease;
+}
+
+#themeIcon:hover {
+    background-color: rgb(80, 133, 150);
+}
+
+.nav {
+    height: var(--nav-sub-position);
+}
+
+.nav a {
+    text-decoration: none;
+    padding: var(--nav-padding-vert) 12px;
+    font-size: var(--nav-font-size);
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+#icon_menu:hover {
+    background-color: rgb(80, 133, 150);
+}
+
+.nav .sub {
+    position: absolute;
+    width: 200px;
+    top: var(--nav-sub-position);
+    background-color: #85b3d5;
+    box-shadow: 10px 10px 5px #a7a0a0;
+}
+
+.nav .sub a {
+    font-size: 90%;
+}
+
+.nav .sub a:hover {
+    background-color: #9acfe1;
+    background-color: var(--sub-a-bg-color);
+}
+
+.nav .sub .sub_sub a {
+    font-size: 90%;
+    list-style: circle;
+}
+
+.nav .sub li {
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: height 500ms;
+    -moz-transition: height 500ms;
+    -o-transition: height 500ms;
+    transition: height 500ms;
+}
+
+.nav ul li:hover .sub li {
+    height: var(--nav-sub-position);
+    z-index: 98;
+    overflow: visible;
+}
+
+.nav ul li:hover .sub .sub_sub a {
+    height: var(--nav-sub-position);
+    overflow: visible;
+}
+
+.nav ul li:hover .sub .sub_sub a:hover {
+    height: var(--nav-sub-position);
+    overflow: visible;
+}
+
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.index h1,
+.index h2,
+.index p {
+    margin: 10px 0;
+}
+
+.body a{
+    color:var(--body-a-color);
+}
+
+.grow {
+    position: absolute;
+    font-size: inherit;
+    /* Transition effect */
+    transition: font-size 1s;
+}
+
+.grow:hover {
+    font-size: 200%;
+}
+
+.wholeImg{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.smallImg{
+    width: 300px;
+    margin: 10px 20px;
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.smallImg.left{
+    float: left;
+}
+
+.smallImg.right{
+    float: right;
+}
+
+.phone-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 4px;
+}
+
+.manic{
+    position: relative;
+    animation: shake 7s infinite;
+    animation-timing-function: linear;
+}
+
+/* shake faster */
+.manic:hover{
+    animation: shake 0.8s infinite;
+    color: var(--manic-color);
+}
+
+/* The animation for the shake effect */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.depressive{
+    position: relative;
+    transition: all 5s ease;
+}
+
+.depressive:hover{
+    transform: translateY(15px);
+    color: var(--depressive-color)
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    background-color: #4b85b1;
+    color: var(--body-color);
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 10%;
+    font-size: 14px;
+}
+
+@media screen and (min-height: 835px) {
+    /* to make footer stick to the bottom of the screen if the screen is too large*/
+    .footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/* responsive to screen less than 1000px */
+@media screen and (max-width: 1000px) {
+    :root {
+        --nav-sub-position: auto;
+    }
+
+    /* not shown on the screen as scrolling down */
+    .header {
+        position: static;
+    }
+
+    /* To make the nav bar become fully on screen */
+    .nav ul,
+    .nav .sub {
+        width: 100%;
+    }
+
+    .nav .sub {
+        position: initial;
+    }
+
+    .nav ul:not(:first-child) {
+        /*This control the display of all tab except home page*/
+        display: var(--nav-toggle);
+    }
+
+    #club_logo {
+        display: none;
+    }
+
+    #icon_menu {
+        display: block;
+    }
+
+    .body {
+        margin: 0px 5%;
+    }
+
+    #themeIcon {
+        right: 60px;
+    }
+
+    .bgShape:nth-child(1) {
+        left: -53%;
+    }
+
+    @keyframes bgShape1Move {
+        from {
+            left: -71%;
+        }
+
+        to {
+            left: -53%;
+        }
+    }
+
+    .index {
+        margin-top: 20px;
+    }
+
+    /* for smaller screen */
+    @keyframes CircleMoveUp {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(-1000px);
+        }
+    }
+
+    /* use symbols instead of text */
+    #topBtn::after {
+        content: "\2191";
+    }
+}
