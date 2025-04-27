@@ -1,44 +1,115 @@
 <!DOCTYPE html>
+
 <head>
     <title>Persecutory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg"/>
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
-                    <a href="index.html">Home</a>
-                    <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()"/>
-                </li></ul>
-                    <ul><li class=""><a href="about.html">About us</a></li></ul>
-                    <ul><li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
                         <ul class="sub">
                             <li><a href="schizophrenia.html">Schizophrenia</a></li>
-                            <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
+                            <li class="sub_sub active"><a href="schizophrenia_1.html">- Persecutory</a></li>
                             <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
                             <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
                             <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
                             <li><a href="bipolar.html">Bipolar disorder</a></li>
                             <li><a href="depression.html">Depression</a></li>
                         </ul>
-                    </li></ul>
-                    <ul><li class=""><a href="prevention.html">Prevention</a></li></ul>
-                    <ul><li class=""><a href="support.html">Social support</a></li></ul>
-                    <ul><li class=""><a href="join.html">Join us</a></li></ul>
+                    </li>
                 </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
+                </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Persecutory</h1>
 
+        <div class="body">
+            <h1>Persecutory Delusion</h1>
+            <div>
+                <img class="smallImg right" src="images/pictures/Persecutory.jpeg" alt="Persecutory">
+                <p>
+                    Persecutory delusion is a type of delusion where a person believes someone wants to harm them.
+                    A person with the delusion of persecution is convinced the other individual (or more people)
+                    threatens
+                    them, wants to kill them, or is spying on them.
+                </p>
+            </div>
+            <div>
+                <h2>Causes of persecutory delusion:</h2>
+                <ul>
+                    <li> Others mental health problem: </br>
+                        If the person has other mental health problems, such as schizophrenia or bipolar disorder, they
+                        may be more likely to suffer persecutory delusion.
+                    </li>
+                    <li> Biological factors: </br>
+                        The risk is increased by a family history of mental diseases like schizophrenia. Brain
+                        abnormalities include imbalances in neurotransmitters, especially dopamine, and anomalies in
+                        parts of the brain like the limbic system will also increase the chance of suffering persecutory
+                        delusion.
+                    </li>
+                    <li> Environmental factors: </br>
+                        Vulnerability can be made worse by a lack of supportive relationships.
+                    </li>
+                    <li> Substance abuse: </br>
+                        Using drugs or alcohol, particularly cannabis, can cause delusions.
+                    </li>
+            </div>
+            <div>
+                <img class="smallImg left" src="images/pictures/Persecutory 1.jpeg" alt="Persecutory">
+                <h2>Signs and Symptoms of Persecutory Delusion</h2>
+
+                <ul>
+                    <li>Being convinced that someone threatens or wants to do harm</li>
+                    <li>Becoming argumentative or violent when people question the delusion</li>
+                    <li>Reporting everything to authorities, and believing the authorities in question are involved as
+                        well
+                    </li>
+                    <li>Keeping on believing in paranoid theories even that no evidence confirms the allegation</li>
+            </div>
+        </div>
+    </div>
+
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
     </div>
     <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id = "topBtn">Go to top</button>
+    <button onclick="goToTop()" id="topBtn"></button>
 
-    <script src="design.js"></script>
+    <script src="js/design.js"></script>
 </body>

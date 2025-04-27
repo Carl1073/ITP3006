@@ -3,22 +3,22 @@
 <head>
     <title>Mental Health Concerning Club</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- For slide show -->
-    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="css/slide.css">
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg" />
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
-                    <li class="" id="home_nav">
+                    <li class="active" id="home_nav">
                         <a href="index.html">Home</a>
-                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()" />
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
                     </li>
                 </ul>
                 <ul>
@@ -46,58 +46,81 @@
                 <ul>
                     <li class=""><a href="join.html">Join us</a></li>
                 </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
                 </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Welcome to Mental Health Concerning Club.</h1>
-        <h2>A club to care mental disorder.</h2>
-        <!-- Slideshow container -->
-        <p>Our recent activity</p>
-        <div class="slideshow-container">
-    
-            <!-- Full-width images with number and caption text -->
-            <div class="slide-container fade">
-                <div class="number-text">1 / 4</div>
-                <img class="slide-image" src="images/pictures/single talk 1.jpg">
-                <div class="slide-caption">A teacher who suffer mental health seek for help</div>
+
+        <div class="body index">
+            <h1>Welcome to Mental Health Concerning Club. </h1>
+            <h2>A club to care person with mental health problems </h2>
+            <!-- Slideshow container -->
+            <p>Our recent activity</p>
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="slide-container fade">
+                    <div class="number-text">1 / 4</div>
+                    <img class="slide-image" src="images/pictures/single talk 1.jpeg">
+                    <div class="slide-caption">A teacher who suffers mental health problem is seeking for help</div>
+                </div>
+
+                <div class="slide-container fade">
+                    <div class="number-text">2 / 4</div>
+                    <img class="slide-image" src="images/pictures/single talk 2.jpg">
+                    <div class="slide-caption">
+                        A discussion session on sharing the mental problem encountered among members
+                    </div>
+                </div>
+
+                <div class="slide-container fade">
+                    <div class="number-text">3 / 4</div>
+                    <img class="slide-image" src="images/pictures/group talk.jpg">
+                    <div class="slide-caption">A meeting of our club is held every 6 months</div>
+                </div>
+
+                <div class="slide-container fade">
+                    <div class="number-text">4 / 4</div>
+                    <img class="slide-image" src="images/pictures/speech.jpg">
+                    <div class="slide-caption">A Professional sharing to students</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="slide-prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="slide-next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-    
-            <div class="slide-container fade">
-                <div class="number-text">2 / 4</div>
-                <img class="slide-image" src="images/pictures/single talk 2.jpg">
-                <div class="slide-caption">A discussion about mental health.</div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div class="dot-container">
+                <span class="slide-dot" onclick="currentSlide(0)"></span>
+                <span class="slide-dot" onclick="currentSlide(1)"></span>
+                <span class="slide-dot" onclick="currentSlide(2)"></span>
+                <span class="slide-dot" onclick="currentSlide(3)"></span>
             </div>
-    
-            <div class="slide-container fade">
-                <div class="number-text">3 / 4</div>
-                <img class="slide-image" src="images/pictures/group talk.jpg">
-                <div class="slide-caption">Our club meeting for every half year.</div>
-            </div>
-    
-            <div class="slide-container fade">
-                <div class="number-text">4 / 4</div>
-                <img class="slide-image" src="images/pictures/speech.jpg">
-                <div class="slide-caption">Professional share to students</div>
-            </div>
-    
-            <!-- Next and previous buttons -->
-            <a class="slide-prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="slide-next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
-    
-        <!-- The dots/circles -->
-        <div class="dot-container">
-            <span class="slide-dot" onclick="currentSlide(1)"></span>
-            <span class="slide-dot" onclick="currentSlide(2)"></span>
-            <span class="slide-dot" onclick="currentSlide(3)"></span>
-            <span class="slide-dot" onclick="currentSlide(4)"></span>
-        </div>    
+
+        <div class="footer">
+            Disclaimer: This website is for exercise purposes only. The pictures and information are not real and are not related to any real person or organization. The website is not intended to provide medical advice or treatment. 
+        </div>
     </div>
-
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
     <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id="topBtn">Go to top</button>
+    <button onclick="goToTop()" id="topBtn"></button>
 
-    <script src="design.js"></script>
+    <script src="js/design.js"></script>
+    <script src="js/slide.js"></script>
 </body>

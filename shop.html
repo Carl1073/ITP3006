@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
+            <div class="nav">
+                <ul>
+                    <li class="" id="home_nav">
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <ul class="sub">
+                            <li><a href="schizophrenia.html">Schizophrenia</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
+                            <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
+                            <li><a href="bipolar.html">Bipolar disorder</a></li>
+                            <li><a href="depression.html">Depression</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                <ul class="active">
+                    <li class=""><a href="shop.html">Shop</a></li>
+                </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
+            </div>
+        </div>
+
+        <!-- a mask to darken the background when the popup is open to prevent user from clicking item -->
+        <div id="mask"></div>
+        <!-- a popup div that appears when the user checkouts the items -->
+
+        <div class="overlayDiv">
+            <div class = "info">
+                <form name="buyThings" onsubmit="return confirmOrder()">
+                <fieldset>
+                    <legend>Thank you for select our product.</legend>
+                    <h2>Information</h2>
+                    *Name: <input type="text" name="username" pattern="^[A-Z][A-Za-z ]" title="Capital first character"
+                        required="required" /><br />
+                    *Student ID: <input type="text" name="student_ID" maxlength="9" pattern="^[0-9]{9}" title="9 digits" required="required" /><br />
+                    *Gender:
+                    <label><input type="radio" name="gender" value="M" required="required" /> Male</label>
+                    <label><input type="radio" name="gender" value="F" /> Female <br /></label>
+                    Phone: <input type="text" name="phone" maxlength="8" /><br />
+                    *Email Address:<input type="email" name="email" required="required"><br />
+                    *Address:<textarea rows="5" cols="40" name="address"></textarea><br />
+                    <p>Note: All the information you provide will be kept confidential and will not be shared with any third parties.</p>
+                    <h2>Your Order</h2>
+                    <table id="infoCartItems">
+                        <tr>
+                            <th>Product</th>
+                            <th>Color/Flavor</th>
+                            <th>Unit Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </table>
+                    <p>Total: $<span id="infoTotalPrice">0.00</span></p>
+                    <input class="greenButton" type="submit" id="confirmOrder" value="Confirm to purchase"/>
+                    <input class="redButton" type="reset" value="Clear Info" />
+                    <button class="redButton" id="closePopup">Cancel order</button>
+                </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="body">
+            <h1>Shop</h1>
+            <p>If you are interested in getting some mindfulness tools, you may see our offered high quality merchandise.</p>
+            <p>As our club does not have a large budget, we are selling these products of each type in at most 10 at once only.</p>
+            <h2>Available Products</h2>
+        </div>
+
+        <!-- Shopping List Section -->
+        <div class="shopping-list" name="buyThings">
+
+            <div class="product" id="product1">
+                <img src="images/pictures/product 1.jpg" alt="Product 1">
+                <h3>Stress Relief Ball</h3>
+                <p>$25.00</p>
+                <select id="optionSelect1">
+                    <option value="">Select a color</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                    <option value="yellow">yellow</option>
+                </select>
+                <input type="number" id="quantityInput1" value="1" min="1" max="10" title="Enter 1 to 10">
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="product" id="product2">
+                <img src="images/pictures/product 2.jpeg" alt="Product 2">
+                <h3>Mindfulness Notebook</h3>
+                <p>$20.00</p>
+                <select id="optionSelect2">
+                    <option value="">Select a color</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                    <option value="yellow">yellow</option>
+                </select>
+                <input type="number" id="quantityInput2" value="1" min="1" max="10" title="Enter 1 to 10">
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="product" id="product3">
+                <img src="images/pictures/product 3.jpeg" alt="Product 3">
+                <h3>Relaxation Candle</h3>
+                <p>$30.00</p>
+                <select id="optionSelect3">
+                    <option value="">Select a flavor</option>
+                    <option value="Lemon Glass">Lemon Glass</option>
+                    <option value="Tea Tree">Tea Tree</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Peppermint">Peppermint</option>
+                    <option value="Sweet Orange">Sweet Orange</option>
+                    <option value="Eucalyptus">Eucalyptus</option>
+                </select>
+                <input type="number" id="quantityInput3" value="1" min="1" max="10" title="Enter 1 to 10">
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+            <div class="product" id="product4">
+                <img src="images/pictures/product 4.jpeg" alt="Product 4">
+                <h3>Relaxation Candle</h3>
+                <p>$30.00</p>
+                <select id="optionSelect4">
+                    <option value="">Select a flavor</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Chamomile">Chamomile</option>
+                    <option value="Rose">Rose</option>
+                    <option value="Vanilla">Vanilla</option>
+                    <option value="Sweet Orange">Sweet Orange</option>
+                    <option value="Eucalyptus">Eucalyptus</option>
+                </select>
+                <input type="number" id="quantityInput4" value="1" min="1" max="10" title="Enter 1 to 10">
+                <button onclick="addToCart(4)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Order Details Section -->
+        <div class="order-details">
+            <h2>Your Order</h2>
+            <table id="cartItems" border="1">
+                <tr>
+                    <th>Product</th>
+                    <th>Color/Flavor</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+                <!-- Items will be dynamically added here -->
+                <tr id="emptyCartRow">
+                    <td colspan="6">Your cart is empty</td>
+                </tr>
+            </table>
+            <p>Total: $<span id="totalPrice">0.00</span></p>
+            <button type="submit" id="checkoutBtn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
+    <!-- This is a button to scroll to top -->
+    <button onclick="goToTop()" id="topBtn"></button>
+
+    <script src="js/design.js"></script>
+    <script src="js/shop.js"></script>
+</body>

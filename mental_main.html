@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Mental Disorder</title>
+    <title>Common Disorder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg" />
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
                         <a href="index.html">Home</a>
-                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()" />
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
                     </li>
                 </ul>
                 <ul>
                     <li class=""><a href="about.html">About us</a></li>
                 </ul>
                 <ul>
-                    <li class=""><a href="mental_main.html">Mental Disorder</a>
+                    <li class="active"><a href="mental_main.html">Mental Disorder</a>
                         <ul class="sub">
                             <li><a href="schizophrenia.html">Schizophrenia</a></li>
                             <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
@@ -43,56 +43,74 @@
                 <ul>
                     <li class=""><a href="join.html">Join us</a></li>
                 </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
                 </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Common Mental Disorders</h1>
-        <p>Though each person's experience is different, millions of people worldwide suffer from mental health illnesses.
-            Understanding such illnesses is the first step towards increasing awareness, empathy, and support for people affected. Here, we'll cover common mental health illnesses, their symptoms, and how to get assistance. For further information, please visit the link below.
-        </p>
-    
-        <div>
-            <ol>
-                <li>
-                    <p><a href="schizophrenia.html">Schizophrenia and Psychotic Disorders</a></p>
-                    Schizophrenia involves distorted thinking, perceptions, and emotions. It often includes psychosis, such
-                    as hallucinations or delusions.
-                    Below are the some of the types of Schizophrenia:
-                    <ul>
-                        <li class=""><a href="schizophrenia_1.html">Persecutory</a></li>
-                        <li class=""><a href="schizophrenia_2.html">Grandiose</a></li>
-                        <li class=""><a href="schizophrenia_3.html">Jealousy</a></li>
-                        <li class=""><a href="schizophrenia_4.html">Erotomania</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <p><a href="bipolar.html">Bipolar disorder</a></p>
+
+        <div class="body">
+
+            <h1>Common Mental Disorders</h1>
+            <p>Though each person's experience is different, millions of people worldwide suffer from mental health
+                illnesses.
+                Understanding such illnesses is the first step towards increasing awareness, empathy, and support for
+                people affected. Here, we'll cover common mental health illnesses, their symptoms, and how to get
+                assistance. For further information, please visit the link below.
+            </p>
+
+            <p><a href="schizophrenia.html">Schizophrenia and Psychotic Disorders</a></p>
+            Schizophrenia involves distorted thinking, perceptions, and emotions. It often includes psychosis, such
+            as hallucinations or delusions.
+            Below are the some of the types of Schizophrenia:
+            <ul>
+                <li class=""><a href="schizophrenia_1.html">Persecutory Disorders</a></li>
+                <li class=""><a href="schizophrenia_2.html">Grandiose Disorders</a></li>
+                <li class=""><a href="schizophrenia_3.html">Jealousy Disorders</a></li>
+                <li class=""><a href="schizophrenia_4.html">Erotomania Disorders</a></li>
+            </ul>
+
+                <p><a href="bipolar.html">Bipolar Disorders</a></p>
+                <p>
                     Bipolar Disorder is characterized by extreme mood swings, ranging from manic
                     (high energy, impulsivity) to depressive (low energy, sadness) episodes.
-                </li>
-                <li>
-                    <p><a href="depression.html">Depressive Disorders</a></p>
+                </p>
+                <p><a href="depression.html">Depressive Disorders</a></p>
+                <p>
                     Depression goes beyond feeling sad or down. It’s a persistent condition that can affect how you think,
                     feel, and function. Major Depressive Disorder and Persistent Depressive Disorder (dysthymia) are common
                     types.
-                </li>
-            </ol>
+                </p>
+
             <h2>Seeking Help</h2>
             <p>If you or someone you know is suffering from any of these problems, it is critical to seek assistance.
-                Mental health specialists including therapists, counselors, and psychiatrists can give necessary assistance and therapy. Remember that asking help displays strength, not weakness.</p>
-    
+                Mental health specialists including therapists, counselors, and psychiatrists can give necessary
+                assistance and therapy. Remember that asking help displays strength, not weakness.</p>
+
             <h2>Disclaimer</h2>
-            <p>This page and the detail of illness provide information only and should not be used as a substitute for professional medical advice, diagnosis, or treatment.
-                Always consult a licensed mental health professional or a physician.</p>
-    
-    
+            <p>This page and the detail of illness provide information only and should not be used as a substitute for
+                professional medical advice, diagnosis, or treatment.
+                Always consult a licensed mental health professional or a physician.
+            </p>
         </div>
 
     </div>
 
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
     <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id="topBtn">Go to top</button>
+    <button onclick="goToTop()" id="topBtn"></button>
 
-    <script src="design.js"></script>
+    <script src="js/design.js"></script>
 </body>

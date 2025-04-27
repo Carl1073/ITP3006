@@ -1,45 +1,120 @@
 <!DOCTYPE html>
+
 <head>
     <title>Jealousy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg"/>
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
-                    <a href="index.html">Home</a>
-                    <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()"/>
-                </li></ul>
-                    <ul><li class=""><a href="about.html">About us</a></li></ul>
-                    <ul><li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
                         <ul class="sub">
                             <li><a href="schizophrenia.html">Schizophrenia</a></li>
                             <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
                             <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
-                            <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
+                            <li class="sub_sub active"><a href="schizophrenia_3.html">- Jealousy</a></li>
                             <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
                             <li><a href="bipolar.html">Bipolar disorder</a></li>
                             <li><a href="depression.html">Depression</a></li>
                         </ul>
-                    </li></ul>
-                    <ul><li class=""><a href="prevention.html">Prevention</a></li></ul>
-                    <ul><li class=""><a href="support.html">Social support</a></li></ul>
-                    <ul><li class=""><a href="join.html">Join us</a></li></ul>
+                    </li>
                 </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
+                </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Jealousy</h1>
+
+        <div class="body">
+            <h1>Jealousy Delusion</h1>
+            <img class="smallImg right" src="images/pictures/Jealousy 1.jpeg" alt="Jealousy">
+
+            <p>
+                A jealous delusion is a psychiatric disorder whereby a person believes, falsely, that their partner (or
+                sexual partner) is being disloyal.
+            </p>
+            <h2>Cause of Jealousy Delusion</h2>
+            <ul>
+                <li>
+                    Mental Health Disorders: <br />
+                    Anxiety Disorders cause people to fill insecurity and low self-esteem. This may contribute jealousy
+                    disorders by easily misinterpreting their partner's actions.
+                </li>
+                <li>
+                    Past Experiences: <br />
+                    Previous experiences of partner betrayals or infidelities can lead to over sensitive to potential
+                    threats.
+                </li>
+                <li>
+                    Environment Influences: <br />
+                    The person might be more prone to develop jealousy delusion if they live in surroundings where
+                    infidelity or exclusivity is common. likely to develop jealousy delusion.
+                </li>
+                <li>
+                    Brain Abnormalities: <br />
+                    Structural and functional changes in sectors of the brain including the insula and medial
+                    frontal/anterior cingulate cortex constitute brain abnormalities.
+
+                </li>
+            </ul>
+
+            <img class="smallImg left" src="images/pictures/Jealousy.jpeg" alt="Jealousy">
+            <h2>Signs and Symptoms of Jealousy Delusion</h2>
+
+            <ul>
+                <li>Stalking and other obsessive behaviors</li>
+                <li>Being convinced of their partner's infidelity despite having no evidence</li>
+                <li>Constantly checking and monitoring their partner’s social media</li>
+                <li>Attempting to isolate their partner from friends and family</li>
+                <li>Violence against their partner</li>
+            </ul>
+            </p>
+
+        </div>
 
     </div>
 
-    <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id = "topBtn">Go to top</button>
 
-    <script src="design.js"></script>
+
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
+    <!-- This is a button to scroll to top -->
+    <button onclick="goToTop()" id="topBtn"></button>
+
+    <script src="js/design.js"></script>
 </body>

@@ -3,20 +3,25 @@
 <head>
     <title>Join us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
-    <style type="text/css">fieldset { border-radius: 10px; }</style>
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/join.css">
+    <style type="text/css">
+        fieldset {
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg" />
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
                         <a href="index.html">Home</a>
-                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()" />
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
                     </li>
                 </ul>
                 <ul>
@@ -30,7 +35,7 @@
                             <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
                             <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
                             <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
-                            <li><a href="manic.html">Bipolar disorder</a></li>
+                            <li><a href="bipolar.html">Bipolar disorder</a></li>
                             <li><a href="depression.html">Depression</a></li>
                         </ul>
                     </li>
@@ -42,68 +47,100 @@
                     <li class=""><a href="support.html">Social support</a></li>
                 </ul>
                 <ul>
-                    <li class=""><a href="join.html">Join us</a></li>
+                    <li class="active"><a href="join.html">Join us</a></li>
                 </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
                 </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Join us</h1>
-        <a>If you are interested to join our club or just take participate some of our activities, you can sign the
-            following form included. No fee is required.&#128523;</a>
-        <form method="post" enctype="multipart/form-data" 
-        action="read_data.php" name="register_form">
-            <fieldset>
-                <legend>Join our club.</legend>
-                <h2>Information</h2>
-                Name: <input type="text" name="username" /><br/>
-                Student ID: <input type="text" name="student_ID"  maxlength="9"/><br/>
-                Gender: 
-                <input type="radio" name="gender" value="M" /> Male
-                <input type="radio" name="gender" value="F" /> Female <br/>
-                Phone: <input type="text" name="phone"  maxlength="8"/><br/>
-                Email Address:<input type="email" name="email"><br/>
-                <h2>About you</h2>
-                1. What topics or activities are you most interested in?<br/>
-                <textarea rows="2" cols="40" name="ay1"></textarea><br/>
-                2. Do you currently have access to mental health support (e.g., therapy, counseling)?<br/>
-                <input type="radio" name="ay2" value="Y" /> Yes
-                <input type="radio" name="ay2" value="N" /> No <br/>
-                <input type="submit" value="Send Form" />
-                <input type="reset" value="Clear Form" />
-            </fieldset>
-        </form>
-    
-        <form method="post" enctype="multipart/form-data" 
-        action="read_data.php" name="activity_form">
-            <fieldset>
-                <legend>Join our activity.</legend>
-                <h2>Information</h2>
-                Name: <input type="text" name="username" /><br/>
-                Student ID: <input type="text" name="student_ID"  maxlength="9"/><br/>
-                Gender: 
-                <input type="radio" name="gender" value="M" /> Male
-                <input type="radio" name="gender" value="F" /> Female <br/>
-                Phone: <input type="text" name="phone"  maxlength="8"/><br/>
-                Email Address:<input type="email" name="email"><br/>
-                <h2>Activity</h2>
-                Which activities do you want to join?<br/>
-                <select name="campus">
-                    <option value="single">Single talk</option>
-                    <option value="visit">Visit patient</option>
-                    <option value="speech">Speech</option>
-                </select>
-                <br/>
-                <input type="submit" value="Send Form" />
-                <input type="reset" value="Clear Form" />
-            </fieldset>
-        </form>
+
+        <div class="body">
+            <h1>Join us</h1>
+            <p>If you are interested to join our club or just take participate some of our activities, you can sign the
+                following form included. No fee is required.&#128523;</p>
+            <form name="joinClub" onsubmit="confirmSubmit()"> 
+                <fieldset>
+                    <legend>Join our club</legend>
+                    <h2>Information</h2>
+                    *Name: <input type="text" name="username" pattern="^[A-Z][A-Za-z ]+" title="Capital first character"
+                        required="required" /><br />
+                    *Student ID: <input type="text" name="student_ID" maxlength="9" pattern="^[0-9]{9}" title="9 digits" required="required" /><br />
+                    *Gender:
+                    <label><input type="radio" name="gender" value="M" required="required" /> Male</label>
+                    <label><input type="radio" name="gender" value="F" /> Female <br /></label>
+                    Phone: <input type="text" name="phone" maxlength="8" /><br />
+                    *Email Address:<input type="email" name="email" required="required"><br />
+                    <h2>About you</h2>
+                    1. What topics or activities are you most interested in?<br />
+                    <textarea rows="5" cols="40" name="ay1"></textarea><br />
+                    *2. Do you currently have access to mental health support (e.g., therapy, counseling)?<br />
+                    <input type="radio" name="ay2" value="Y" required="required" /> Yes
+                    <input type="radio" name="ay2" value="N" /> No <br />
+                    <input type="submit" value="Send Form" />
+                    <input type="reset" value="Clear Form" />
+                </fieldset>
+            </form>
+
+            <form name="joinAct" onsubmit="confirmSubmit()">
+                <fieldset>
+                    <legend>Join our activity.</legend>
+                    <h2>Information</h2>
+                    *Name: <input type="text" name="username" pattern="^[A-Z][A-Za-z ]+" title="Capital first character"
+                        required="required" /><br />
+                    *Student ID: <input type="text" name="student_ID" maxlength="9" pattern="^[0-9]{9}" title="9 digits" required="required" /><br />
+                    *Gender:
+                    <label><input type="radio" name="gender" value="M" required="required" /> Male</label>
+                    <label><input type="radio" name="gender" value="F" /> Female <br /></label>
+                    Phone: <input type="text" name="phone" maxlength="8" /><br />
+                    *Email Address:<input type="email" name="email" required="required"><br />
+                    <h2>Activity</h2>
+                    Which activities do you want to join?<br />
+                    <select name="act">
+                        <option value="single">Single talk</option>
+                        <option value="visit">Visit patient</option>
+                        <option value="speech">Speech</option>
+                    </select>
+                    <br />
+                    <input type="submit" value="Send Form" />
+                    <input type="reset" value="Clear Form" />
+                </fieldset>
+            </form>
+        </div>
     </div>
 
 
 
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
     <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id="topBtn">Go to top</button>
+    <button onclick="goToTop()" id="topBtn"></button>
 
-    <script src="design.js"></script>
+    <script src="js/design.js"></script>
+    <script>
+        function confirmSubmit(){
+            if (confirm('Are you sure to send this form?')) {
+                alert('Thank you for joining us! We will contact you soon.');
+                return true;
+            }else{
+                alert('You have cancelled the form submission.');
+                return false;
+            }
+        }
+    </script>
 </body>

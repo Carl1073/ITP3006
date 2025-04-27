@@ -1,22 +1,28 @@
 <!DOCTYPE html>
+
 <head>
     <title>Depression</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg"/>
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
-                    <a href="index.html">Home</a>
-                    <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()"/>
-                </li></ul>
-                    <ul><li class=""><a href="about.html">About us</a></li></ul>
-                    <ul><li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
                         <ul class="sub">
                             <li><a href="schizophrenia.html">Schizophrenia</a></li>
                             <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
@@ -24,21 +30,75 @@
                             <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
                             <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
                             <li><a href="bipolar.html">Bipolar disorder</a></li>
-                            <li><a href="depression.html">Depression</a></li>
+                            <li class="active"><a href="depression.html">Depression</a></li>
                         </ul>
-                    </li></ul>
-                    <ul><li class=""><a href="prevention.html">Prevention</a></li></ul>
-                    <ul><li class=""><a href="support.html">Social support</a></li></ul>
-                    <ul><li class=""><a href="join.html">Join us</a></li></ul>
+                    </li>
                 </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
+                </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Depression</h1>
+        <div class="body">
+            <h1>Depression</h1>
+            <img class="smallImg right" src="images/pictures/Depression.jpeg" alt="Depression">
+
+            <p>
+                Depression is a widespread and dangerous mood disorder that results in an over feeling of sadness and
+                disengagement.
+            </p>
+            <h2>What Causes Depression?</h2>
+            <p>
+                There are studies shown that quite a number of factors could actually lead up to depression. Depression
+                is frequently brought on by changes in the chemistry of the brain. The fact that depression typically
+                runs in families is another regular feature. Life events or diseases can cause an individual to be
+                depressed. Sometimes, these may never have an external trigger at all.
+            </p>
+            <h2>What are the symptoms of Depression?</h2>
+            <img class="smallImg right" src="images/pictures/Depression 1.jpeg" alt="Depression">
+
+            <p>
+            <ul>
+                <li> Feeling sad, anxious, or “empty” </li>
+                <li> Feeling hopeless, worthless, and pessimistic</li>
+                <li> Crying a lot</li>
+                <li> Loss of interest in hobbies and interests that once enjoyed</li>
+                <li> Decreased energy or fatigue</li>
+                <li> Have difficulty in concentrating, remembering something, or making decisions</li>
+                <li> Have difficulty in sleeping, early morning awakening, or oversleeping </li>
+                <li> Appetite or weight changes </li>
+                <li> Thoughts of death, suicide, self-harm, or suicide attempts</li>
+            </ul>
+            </p>
+
+        </div>
 
     </div>
-    <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id = "topBtn">Go to top</button>
 
-    <script src="design.js"></script>
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
+    <!-- This is a button to scroll to top -->
+    <button onclick="goToTop()" id="topBtn"></button>
+
+    <script src="js/design.js"></script>
 </body>

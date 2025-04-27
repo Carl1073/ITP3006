@@ -3,19 +3,19 @@
 <head>
     <title>Social support</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg" />
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
                         <a href="index.html">Home</a>
-                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()" />
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
                     </li>
                 </ul>
                 <ul>
@@ -38,85 +38,103 @@
                     <li class=""><a href="prevention.html">Prevention</a></li>
                 </ul>
                 <ul>
-                    <li class=""><a href="support.html">Social support</a></li>
+                    <li class="active"><a href="support.html">Social support</a></li>
                 </ul>
                 <ul>
                     <li class=""><a href="join.html">Join us</a></li>
                 </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
                 </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Social Support</h1>
-        <p>
-            Nobody should have dealt with life's challenges alone. Social support is crucial for maintaining mental health and wellbeing. Connecting with others, whether through friendship, community, or professional guidance, can have a significant impact.
-        </p>
-    
-        <h2> Why Social Support Matters </h2>
-        <p>Social support plays a critical role in improving mental health by: </p>
-        <ul>
-            <li>Talking about your feelings and experiences can help relieve emotional loads and lower stress.</li>
-            <li>Strong social interactions provide comfort and inspiration during difficult times.</li>
-            <li>Improving coping skills: Supportive relationships help you develop healthier ways to handle challenges.</li>
-            <li>Connecting with others reduces loneliness and promotes a sense of community.</li>
-        </ul>
-    
-        <h2>Types of Social Support</h2>
-        <p>Support comes in many forms, and different people may need different kinds of connection. Here are some common
-            types of social support:</p>
-        <ul>
-            <li>Emotional Support </li>
-            <p>Listening, empathizing, and providing consolation throughout difficult situations.
-            For example, a friend who listens without judging while you're feeling overwhelmed.</p>
-            <li>Informational Support</li>
-            <p>Providing advise, guidance, or information to aid decision-making.
-                For example, a mentor who gives tools to assist you cope with stress or worry.</p>
-            <li>Practical Support</li>
-            <p>Providing tangible aid with life's obligations and responsibilities.
-                For example, a family member who assists with errands or tasks when you are feeling down.</p>
-            <li>Community Support</li>
-            <p>Participating in groups, clubs, or organizations can create a sense of belonging.
-                For example, consider joining a mental health support group or participating in a community activity.</p>
-        </ul>
-    
-        <h2>Ways to Build Social Support</h2>
-        <p>If you’re looking to strengthen your social support system, here are some steps you can take:</p>
-        <ul>
-            <li>Reach Out to Loved Ones</li>
-            <p>Discuss your views and feelings with family and friends.
-                Tell them what you need and how they can help.</p>
-            <li>Join a Support Group</li>
-            <p>Connect with others who have had similar experiences.
-                Support groups provide a secure area for people to share and learn from each other's experiences.</p>        <li>Participate in Community Activities</li>
-            <p>Meet new people by engaging in hobbies, volunteering, or attending local events.
-                Making social ties can improve your self-belonging.</p>
-            <li>Seek Professional Support</li>
-            <p>Therapists, counselors, and mental health specialists are trained to offer emotional support.
-                If you're having trouble, don't be afraid to reach out.</p>
-        </ul>
-    
-        <h2>Social Support at Mental Health Concerning Club</h2>
-        <p>Mental Health Concerning Club aims to connect and support individuals facing mental health problems. Here's how we can help.</p>
-        <ul>
-            <li>Support Groups: Join our regular group meetings to share experiences, find encouragement, and learn from
-                others.</li>
-            <li>Peer Support Programs: Connect one-on-one with someone who understands what you’re going through.</li>
-            <li>Workshops and Events: Participate in activities that promote connection, awareness, and self-care.</li>
-            <li>Online Forums: Access a safe, judgment-free space to communicate with others from the comfort of your home.
-            </li>
-        </ul>
-    
-        <h2>You’re Not Alone</h2>
-        <p>Remember that seeking social help is a symbol of strength. Practicing self-care demonstrates a commitment to one's own well-being. Connecting with others, whether through a friend or a support group, can provide a sense of self-belonging and self-acceptance.</p>
-        <p> If you're not sure where to start, contact us at Mental Health Concerning Club. We're here to help. We'll protect your privacy</p>
-        <h2>Contact</h2>
-        <p><img class="phone-icon" src="images/icons/phone.png" >:23456789</p>
-        <p><img class="phone-icon" src="images/icons/whatsapp.png" >:23456789</p>
+        
+        <div class="body">
+            <h1>Social Support</h1>
+            <p>
+                Nobody should have dealt with life's challenges alone. Social support is crucial for maintaining mental health and wellbeing. Connecting with others, whether through friendship, community, or professional guidance, can have a significant impact.
+            </p>
+        
+            <h2> Why Social Support Matters </h2>
+            <p>Social support plays a critical role in improving mental health by: </p>
+            <ul>
+                <li>Talking about your feelings and experiences can help relieve emotional loads and lower stress.</li>
+                <li>Strong social interactions provide comfort and inspiration during difficult times.</li>
+                <li>Improving coping skills: Supportive relationships help you develop healthier ways to handle challenges.</li>
+                <li>Connecting with others reduces loneliness and promotes a sense of community.</li>
+            </ul>
+        
+            <h2>Types of Social Support</h2>
+            <p>Support comes in many forms, and different people may need different kinds of connection. Here are some common
+                types of social support:</p>
+            <ul>
+                <li>Emotional Support </li>
+                <p>Listening, empathizing, and providing consolation throughout difficult situations.
+                For example, a friend who listens without judging while you're feeling overwhelmed.</p>
+                <li>Informational Support</li>
+                <p>Providing advise, guidance, or information to aid decision-making.
+                    For example, a mentor who gives tools to assist you cope with stress or worry.</p>
+                <li>Practical Support</li>
+                <p>Providing tangible aid with life's obligations and responsibilities.
+                    For example, a family member who assists with errands or tasks when you are feeling down.</p>
+                <li>Community Support</li>
+                <p>Participating in groups, clubs, or organizations can create a sense of belonging.
+                    For example, consider joining a mental health support group or participating in a community activity.</p>
+            </ul>
+        
+            <h2>Ways to Build Social Support</h2>
+            <p>If you’re looking to strengthen your social support system, here are some steps you can take:</p>
+            <ul>
+                <li>Reach Out to Loved Ones</li>
+                <p>Discuss your views and feelings with family and friends.
+                    Tell them what you need and how they can help.</p>
+                <li>Join a Support Group</li>
+                <p>Connect with others who have had similar experiences.
+                    Support groups provide a secure area for people to share and learn from each other's experiences.</p>        
+                <li>Participate in Community Activities</li>
+                <p>Meet new people by engaging in hobbies, volunteering, or attending local events.
+                    Making social ties can improve your self-belonging.</p>
+                <li>Seek Professional Support</li>
+                <p>Therapists, counselors, and mental health specialists are trained to offer emotional support.
+                    If you're having trouble, don't be afraid to reach out.</p>
+            </ul>
+        
+            <h2>Social Support at Mental Health Concerning Club</h2>
+            <p>Mental Health Concerning Club aims to connect and support individuals facing mental health problems. Here's how we can help.</p>
+            <ul>
+                <li>Support Groups: Join our regular group meetings to share experiences, find encouragement, and learn from
+                    others.</li>
+                <li>Peer Support Programs: Connect one-on-one with someone who understands what you’re going through.</li>
+                <li>Workshops and Events: Participate in activities that promote connection, awareness, and self-care.</li>
+                <li>Online Forums: Access a safe, judgment-free space to communicate with others from the comfort of your home.
+                </li>
+            </ul>
+        
+            <h2>You’re Not Alone</h2>
+            <p>Remember that seeking social help is a symbol of strength. Practicing self-care demonstrates a commitment to one's own well-being. Connecting with others, whether through a friend or a support group, can provide a sense of self-belonging and self-acceptance.</p>
+            <p> If you're not sure where to start, contact us at Mental Health Concerning Club. We're here to help. We'll protect your privacy</p>
+            <h2>Contact</h2>
+            <p><img class="phone-icon" src="images/icons/phone.png" >:23456789</p>
+            <p><img class="phone-icon" src="images/icons/whatsapp.png" >:23456789</p>
+        </div>
 
     </div>
 
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
     <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id="topBtn">Go to top</button>
+    <button onclick="goToTop()" id="topBtn"></button>
 
-    <script src="design.js"></script>
+    <script src="js/design.js"></script>
 </body>

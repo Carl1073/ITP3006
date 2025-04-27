@@ -1,45 +1,123 @@
 <!DOCTYPE html>
+
 <head>
     <title>Erotomania</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg"/>
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
-                    <a href="index.html">Home</a>
-                    <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()"/>
-                </li></ul>
-                    <ul><li class=""><a href="about.html">About us</a></li></ul>
-                    <ul><li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
                         <ul class="sub">
                             <li><a href="schizophrenia.html">Schizophrenia</a></li>
                             <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
                             <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
                             <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
-                            <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
+                            <li class="sub_sub active"><a href="schizophrenia_4.html">- Erotomania</a></li>
                             <li><a href="bipolar.html">Bipolar disorder</a></li>
                             <li><a href="depression.html">Depression</a></li>
                         </ul>
-                    </li></ul>
-                    <ul><li class=""><a href="prevention.html">Prevention</a></li></ul>
-                    <ul><li class=""><a href="support.html">Social support</a></li></ul>
-                    <ul><li class=""><a href="join.html">Join us</a></li></ul>
+                    </li>
                 </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
+                </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-    
-        <h1>Erotomania</h1>
+
+        <div class="body">
+            <h1>Erotic Delusion</h1>
+            <img class="smallImg right" src="images/pictures/Erotomania.jpeg" alt="Erotomania">
+
+            <p>
+                Erotic Delusion, also known as Erotomania, is a uncommon mental disorder that happens when someone is
+                highly fixated on the idea that another person is intensely in love with them.
+            </p>
+
+            <h2>Causes of Erotic Delusion</h2>
+            <p>
+                Although the precise origin of erotic delusion is unknown, certain components could leading the
+                problems:
+            </p>
+            <ul>
+                <li>Mental Health Disorders:<br />
+                    Dementia is one of the possible causes of erotic delusion. It is a disorder that hinder the memory
+                    and judgment. This could leading to erotic delusional beliefs.
+                </li>
+                <li>Neurological factors: <br />
+                    Some studies point out that the changes in brain structure or chemistry possibly contributing to the
+                    emergence of erotic delusion.
+                </li>
+                <li>Environmental factors: <br />
+                    Stressful life events like trauma or loss could set some people off in an erotic dream.</li>
+                <li>Substance abuse: <br />
+                    people who use drugs or alcohol are more likely to develop Erotic delusions. While alcohol impairs
+                    one's capacity for clear and logical thought, certain drugs can alter brain chemistry and result in
+                    delusions.
+                </li>
+                <li>Social isolation: <br />
+                    Those who lack close relationships or are socially isolated could be more prone to have erotic
+                    delusion by not sharing themselves to others.
+                </li>
+            </ul>
+
+            <img class="smallImg left" src="images/pictures/Erotomania 1.jpeg" alt="Erotomania">
+            <h2>Signs and Symptoms of Erotic Delusion</h2>
+            <ul>
+                <li>Constantly sending letters, emails, or gifts to the other person</li>
+                <li>Being convinced that the other person is trying to secretly communicate through glances, gestures,
+                    or coded messages</li>
+                <li>Creating elaborate but false situations in which the other person is pursuing them, stalking them,
+                    or trying to get in touch with them</li>
+                <li>Harassing the other person in public</li>
+                <li>Losing interest in activities other than talking about the other person or doing activities
+                    related to them</li>
+            </ul>
+
+        </div>
 
     </div>
 
-    <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id = "topBtn">Go to top</button>
 
-    <script src="design.js"></script>
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
+    <!-- This is a button to scroll to top -->
+    <button onclick="goToTop()" id="topBtn"></button>
+
+    <script src="js/design.js"></script>
 </body>

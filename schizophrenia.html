@@ -1,24 +1,30 @@
 <!DOCTYPE html>
+
 <head>
     <title>Schizophrenia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg"/>
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
-                    <a href="index.html">Home</a>
-                    <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()"/>
-                </li></ul>
-                    <ul><li class=""><a href="about.html">About us</a></li></ul>
-                    <ul><li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
                         <ul class="sub">
-                            <li><a href="schizophrenia.html">Schizophrenia</a></li>
+                            <li class="active"><a href="schizophrenia.html">Schizophrenia</a></li>
                             <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
                             <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
                             <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
@@ -26,20 +32,81 @@
                             <li><a href="bipolar.html">Bipolar disorder</a></li>
                             <li><a href="depression.html">Depression</a></li>
                         </ul>
-                    </li></ul>
-                    <ul><li class=""><a href="prevention.html">Prevention</a></li></ul>
-                    <ul><li class=""><a href="support.html">Social support</a></li></ul>
-                    <ul><li class=""><a href="join.html">Join us</a></li></ul>
+                    </li>
                 </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
+                </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
         </div>
-        
-        <h1>There are many Schizophrenia</h1>
 
+        <div class="body">
+            <h1>Schizophrenia</h1>
+
+            <h2>What is Schizophrenia?</h2>
+            <p>
+                Schizophrenia is a chronic, severe mental disorder that affects the way a person thinks, acts, expresses
+                emotions, perceives reality, and relates to others.
+            </p>
+
+            <h2>The Main Causes of Schizophrenia</h2>
+            <img class="wholeImg" src="images/pictures/Schizophrenia.jpeg" alt="Schizophrenia" />
+            <p> The main causes of schizophrenia can be categorized as follows:-
+            <ul>
+                <li> Genetics: </br>
+                    There is often a family history of schizophrenia, indicating a genetic factor. It is more likely to
+                    develop if a family member has the disorder.</li>
+                <li> Structural changes in brain: </br>
+                    Studies show that people with schizophrenia may have structural differences in their brains,
+                    including larger ventricles or less gray matter, and these differences can affect cognition and
+                    behavior.</li>
+                <li> Previous drug use: </br>
+                    Some drugs, particularly hallucinogens and stimulants, can induce or worsen symptoms in those who
+                    are susceptible.</li>
+                <li> Environmental factors: </br>
+                    Prenatal exposures to infection, psychosocial stressors, and trauma may play a role in the
+                    development of schizophrenia.</li>
+            </ul>
+            </p>
+
+            <img class="wholeImg" src="images/pictures/Schizophrenia 1.jpeg" alt="Schizophrenia" />
+            <h2>The Main Types of Schizophrenia</h2>
+            <p> There are mainly four types of schizophrenia and details of which are shown in the subordinate pages:
+            <ul>
+                <li> Persecutory Delusion. </li>
+                <li> Grandiose Delusion </li>
+                <li> Jealous Delusion </li>
+                <li> Erotic Delusion </li>
+            </ul>
+            </p>
+        </div>
     </div>
 
-    <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id = "topBtn">Go to top</button>
 
-    <script src="design.js"></script>
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
+    <!-- This is a button to scroll to top -->
+    <button onclick="goToTop()" id="topBtn"></button>
+
+    <script src="js/design.js"></script>
 </body>

@@ -1,46 +1,109 @@
 <!DOCTYPE html>
+
 <head>
     <title>Bipolar disorder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/pictures/club_logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/pictures/club logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <img id="club_logo" src="images/pictures/club_logo.jpg"/>
+            <img id="club_logo" src="images/pictures/club logo.jpeg" />
             <div class="nav">
                 <ul>
                     <li class="" id="home_nav">
-                    <a href="index.html">Home</a>
-                    <img id="icon_menu" src="images/icons/icon_menu.png" onclick="header_toggle()"/>
-                </li></ul>
-                    <ul><li class=""><a href="about.html">About us</a></li></ul>
-                    <ul><li class=""><a href="mental_main.html">Mental Disorder</a>
+                        <a href="index.html">Home</a>
+                        <img id="icon_menu" src="images/icons/icon_menu.png" onclick="headerToggle()" />
+                    </li>
+                </ul>
+                <ul>
+                    <li class=""><a href="about.html">About us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="mental_main.html">Mental Disorder</a>
                         <ul class="sub">
                             <li><a href="schizophrenia.html">Schizophrenia</a></li>
                             <li class="sub_sub"><a href="schizophrenia_1.html">- Persecutory</a></li>
                             <li class="sub_sub"><a href="schizophrenia_2.html">- Grandiose</a></li>
                             <li class="sub_sub"><a href="schizophrenia_3.html">- Jealousy</a></li>
                             <li class="sub_sub"><a href="schizophrenia_4.html">- Erotomania</a></li>
-                            <li><a href="bipolar.html">Bipolar disorder</a></li>
+                            <li class="active"><a href="bipolar.html">Bipolar disorder</a></li>
                             <li><a href="depression.html">Depression</a></li>
                         </ul>
-                    </li></ul>
-                    <ul><li class=""><a href="prevention.html">Prevention</a></li></ul>
-                    <ul><li class=""><a href="support.html">Social support</a></li></ul>
-                    <ul><li class=""><a href="join.html">Join us</a></li></ul>
+                    </li>
                 </ul>
+                <ul>
+                    <li class=""><a href="prevention.html">Prevention</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="support.html">Social support</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="join.html">Join us</a></li>
+                </ul>
+                <ul>
+                    <li class=""><a href="shop.html">Shop</a></li>
+                </ul>
+                <img id="themeIcon" src="images/icons/icon_light_mode.png" onclick="themeToggle()" />
             </div>
-        </div>    
-        
-        <h1>Bipolar disorder</h1>
+        </div>
+
+        <div class="body">
+            <h1>Bipolar Disorder</h1>
+            <img class="smallImg right" src="images/pictures/Bipolar.jpeg" alt="Bipolar disorder">
+            <p>
+                Bipolar disorders is also known as "Manic depression". Those who suffer from this kind of mood disorder
+                experience both manic (high) and depressive (low) instances. In manic phase, patient feel a higher mood,
+                more energy, and not sleepy. In depressive phase, however, patient feel fatigue, a no interest in any
+                activities, and a low mood.
+            </p>
+
+            <h2>What Causes Bipolar Disorders?</h2>
+            <p> Research suggests that there can be many causes which include genetic factors, environmental factors,
+                and their interactions. Genetic factor is a part of this disorder. People with a gene may develop the
+                illness triggered by environmental factors, such as physical illness or other problems in life.
+            </p>
+
+            <img class="smallImg right" src="images/pictures/Bipolar 1.jpeg" alt="Bipolar disorder">
+            <h2>What are the symptoms of bipolar disorders?</h2>
+            <p> The patient may have manic or depressive symptoms depending on which way his mood has swung. The
+                followings are descriptions on the symptoms in the corresponding phase.
+                </br>
+            </p>
+            <ul class="manic">Manic Phase:
+                <li> Feeling euphoric or angry </li>
+                <li> Being overly confident </li>
+                <li> Being energetic</li>
+                <li> Filling with ambitious plans and ideas</li>
+            </ul>
+
+            <ul class="depressive">Depressive Phase:
+                <li> Constant sadness </li>
+                <li> Lack of enjoyment of normal activities</li>
+                <li> Feeling of despair and hopeless </li>
+                <li> Always fatigue </li>
+            </ul>
+            </p>
+        </div>
 
     </div>
 
-
+    <div class="screenBackground">
+        <span class="bgShape"></span>
+        <span class="bgShape"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+        <span class="bgCircle"></span>
+    </div>
     <!-- This is a button to scroll to top -->
-    <button onclick="goToTop()" id = "topBtn">Go to top</button>
+    <button onclick="goToTop()" id="topBtn"></button>
 
-    <script src="design.js"></script>
+    <script src="js/design.js"></script>
 </body>
